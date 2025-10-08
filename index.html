@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoPlanet - Portal de Notícias</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-newspaper"></i> InfoPlanet</h1>
+                <p>Descubra as últimas notícias do mundo todo</p>
+            </div>
+        </header>
+
+        <!-- Navegação/Filtros -->
+        <nav class="nav-section">
+            <div class="nav-buttons">
+                <button id="nav-search" class="nav-btn active">
+                    <i class="fas fa-search"></i> Buscar
+                </button>
+                <button id="nav-categories" class="nav-btn">
+                    <i class="fas fa-tags"></i> Categorias
+                </button>
+                <button id="nav-countries" class="nav-btn">
+                    <i class="fas fa-globe"></i> Países
+                </button>
+            </div>
+        </nav>
+
+        <!-- Seção de Busca -->
+        <section id="search-section" class="content-section active">
+            <div class="search-container">
+                <div class="search-form">
+                    <div class="search-input-group">
+                        <input type="text" id="search-text" placeholder="Digite sua busca (ex: tecnologia, política...)">
+                        <button id="search-btn" class="search-button">
+                            <i class="fas fa-search"></i> Buscar
+                        </button>
+                    </div>
+                    
+                    <div class="filters-row">
+                        <select id="language-select">
+                            <option value="">Todos os idiomas</option>
+                            <option value="pt">Português</option>
+                            <option value="en">Inglês</option>
+                            <option value="es">Espanhol</option>
+                            <option value="fr">Francês</option>
+                            <option value="de">Alemão</option>
+                        </select>
+                        
+                        <select id="country-select">
+                            <option value="">Todos os países</option>
+                            <option value="br">Brasil</option>
+                            <option value="us">Estados Unidos</option>
+                            <option value="gb">Reino Unido</option>
+                            <option value="fr">França</option>
+                            <option value="de">Alemanha</option>
+                            <option value="es">Espanha</option>
+                        </select>
+                        
+                        <input type="number" id="news-count" min="1" max="50" value="10" placeholder="Qtd">
+                    </div>
+                </div>
+            </div>
+            
+            <div id="search-results" class="news-container">
+                <div class="welcome-message">
+                    <i class="fas fa-newspaper"></i>
+                    <h3>Bem-vindo ao News World</h3>
+                    <p>Digite um termo de busca para encontrar as últimas notícias</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Categorias -->
+        <section id="categories-section" class="content-section">
+            <div class="categories-grid">
+                <div class="category-card" data-category="politics">
+                    <i class="fas fa-landmark"></i>
+                    <h3>Política</h3>
+                    <p>Notícias sobre política nacional e internacional</p>
+                </div>
+                <div class="category-card" data-category="technology">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Tecnologia</h3>
+                    <p>Inovações e tendências tecnológicas</p>
+                </div>
+                <div class="category-card" data-category="sports">
+                    <i class="fas fa-futbol"></i>
+                    <h3>Esportes</h3>
+                    <p>Resultados e notícias esportivas</p>
+                </div>
+                <div class="category-card" data-category="business">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Negócios</h3>
+                    <p>Economia e mercado financeiro</p>
+                </div>
+                <div class="category-card" data-category="entertainment">
+                    <i class="fas fa-film"></i>
+                    <h3>Entretenimento</h3>
+                    <p>Cinema, música e celebridades</p>
+                </div>
+                <div class="category-card" data-category="health">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Saúde</h3>
+                    <p>Medicina e bem-estar</p>
+                </div>
+                <div class="category-card" data-category="science">
+                    <i class="fas fa-flask"></i>
+                    <h3>Ciência</h3>
+                    <p>Descobertas e pesquisas científicas</p>
+                </div>
+                <div class="category-card" data-category="environment">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Meio Ambiente</h3>
+                    <p>Sustentabilidade e mudanças climáticas</p>
+                </div>
+            </div>
+            
+            <div id="category-results" class="news-container">
+                <div class="welcome-message">
+                    <i class="fas fa-tags"></i>
+                    <h3>Selecione uma categoria</h3>
+                    <p>Escolha uma categoria acima para ver as notícias relacionadas</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Países -->
+        <section id="countries-section" class="content-section">
+            <div class="countries-grid">
+                <div class="country-card" data-country="br">
+                    <i class="fas fa-flag"></i>
+                    <h3>Brasil</h3>
+                    <p>Notícias nacionais do Brasil</p>
+                </div>
+                <div class="country-card" data-country="us">
+                    <i class="fas fa-flag"></i>
+                    <h3>Estados Unidos</h3>
+                    <p>Notícias dos EUA</p>
+                </div>
+                <div class="country-card" data-country="gb">
+                    <i class="fas fa-flag"></i>
+                    <h3>Reino Unido</h3>
+                    <p>Notícias do Reino Unido</p>
+                </div>
+                <div class="country-card" data-country="fr">
+                    <i class="fas fa-flag"></i>
+                    <h3>França</h3>
+                    <p>Notícias da França</p>
+                </div>
+                <div class="country-card" data-country="de">
+                    <i class="fas fa-flag"></i>
+                    <h3>Alemanha</h3>
+                    <p>Notícias da Alemanha</p>
+                </div>
+                <div class="country-card" data-country="es">
+                    <i class="fas fa-flag"></i>
+                    <h3>Espanha</h3>
+                    <p>Notícias da Espanha</p>
+                </div>
+            </div>
+            
+            <div id="country-results" class="news-container">
+                <div class="welcome-message">
+                    <i class="fas fa-globe"></i>
+                    <h3>Selecione um país</h3>
+                    <p>Escolha um país acima para ver as notícias locais</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contador de notícias -->
+        <div id="news-counter" class="news-counter hidden">
+            <span id="counter-text">0 notícias encontradas</span>
+        </div>
+    </div>
+
+    <!-- Modal para detalhes da notícia -->
+    <div id="news-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+                <!-- Conteúdo da notícia será inserido aqui -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificações -->
+    <div id="notification-container"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
